@@ -1,0 +1,29 @@
+name: Build APK
+
+on:
+  push:
+分支: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    
+    - name: Set up JDK 11
+      uses: actions/setup-java@v3
+      with:
+        java-version: '11'
+        distribution: 'temurin'
+    
+    - name: Build Debug APK
+      run: cd 制作安卓4.4.2_DeepSeekAPP/DeepSeekApp && chmod +x gradlew && ./gradlew assembleDebug
+    
+    - name: Upload Debug APK
+      uses: actions/upload-artifact@v3
+      with:
+        name: DeepSeek-App-Debug
+        path: 制作安卓4.4.2_DeepSeekAPP/DeepSeekApp/app/build/outputs/apk/debug/app-debug.apk
