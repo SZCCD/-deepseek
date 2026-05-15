@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 应用主题 - 兼容Android 4.4 -->
+    <style name="AppTheme" parent="android:Theme.Holo.Light.NoActionBar">
+        <!-- 主色调 -->
+        <item name="android:colorPrimary">#FF4D6A</item>
+        <item name="android:colorPrimaryDark">#FF3D5A</item>
+        <item name="android:colorAccent">#FF4D6A</item>
+        <!-- 窗口背景 -->
+        <item name="android:windowBackground">@android:color/white</item>
+        <!-- 状态栏透明 -->
+        <item name="android:windowTranslucentStatus">false</item>
+    </style>
+</resources>
