@@ -20,7 +20,10 @@ jobs:
         distribution: 'temurin'
     
     - name: Build Debug APK
-      run: cd 制作安卓4.4.2_DeepSeekAPP/DeepSeekApp && chmod +x gradlew && ./gradlew assembleDebug
+      run: |
+        cd 制作安卓4.4.2_DeepSeekAPP/DeepSeekApp
+        chmod +x gradlew
+        ./gradlew assembleDebug
     
     - name: Upload Debug APK
       uses: actions/upload-artifact@v3
