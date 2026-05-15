@@ -302,23 +302,30 @@ public class MainActivity extends Activity {
             .show();
     }
 
-    // 处理返回键
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (keyCode == KeyEvent.KEYCODE_BACK) {
-            // 如果在全屏模式，退出全屏
-            if (customView != null) {
-                onHideCustomView();
-                return true;
+  // 处理返回键
+@Override
+public boolean onKeyDown(int keyCode, KeyEvent event) {
+    if (keyCode == KeyEvent.KEYCODE_BACK) {
+        // 如果在全屏模式，退出全屏
+        if (customView != null) {
+            customView = null;
+            fullscreenContainer.setVisibility(View.GONE);
+            fullscreenContainer.removeAllViews();
+            if (customViewCallback != null) {
+                customViewCallback.onCustomViewHidden();
+                customViewCallback = null;
             }
-            // 如果WebView可以后退，则后退
-            if (webView.canGoBack()) {
-                webView.goBack();
-                return true;
-            }
+            webView.setVisibility(View.VISIBLE);
+            return true;
         }
-        return super.onKeyDown(keyCode, event);
+        // 如果WebView可以后退，则后退
+        if (webView.canGoBack()) {
+            webView.goBack();
+            return true;
+        }
     }
+    return super.onKeyDown(keyCode, event);
+}
 
     // dp转px
     private int dpToPx(int dp) {
