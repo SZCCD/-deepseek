@@ -3,7 +3,7 @@ buildscript {
         google()
         jcenter()
         maven {
-            url 'https://download.01.org/crosswalk/releases/crosswalk/android/maven2'
+            url 'https://code.aliyun.com/louisgeek/maven/raw/master'
         }
     }
     dependencies {
@@ -16,7 +16,7 @@ allprojects {
         google()
         jcenter()
         maven {
-            url 'https://download.01.org/crosswalk/releases/crosswalk/android/maven2'
+            url 'https://code.aliyun.com/louisgeek/maven/raw/master'
         }
     }
 }
