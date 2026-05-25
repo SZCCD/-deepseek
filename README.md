@@ -60,13 +60,11 @@
 - 
 
 **依赖配置**：
-```gradle
+- gradle
 // build.gradle dependencies { implementation 'com.tencent.tbs:tbssdk:44286' }
 
-```java
+- java
 // MainActivity.java import com.tencent.smtt.sdk.WebView;
-
-WebView webView = new WebView(this); webView.loadUrl("https://chat.deepseek.com/");
 
 
 ###  最后一步：下载安装
