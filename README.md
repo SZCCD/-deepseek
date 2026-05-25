@@ -69,17 +69,15 @@
 WebView webView = new WebView(this); webView.loadUrl("https://chat.deepseek.com/");
 
 
----
-
-## 下载安装
-
+###  最后一步：下载安装
+**步骤**：
 1. 进入 Actions 页面
 2. 下载 `DeepSeek-App-Debug.zip`
 3. 解压安装 APK
 
 ---
 
-## 作者
+### 作者
 
 - GitHub: [SZCCD](https://github.com/SZCCD)
 - 设备: LG-F200K (Android 4.4.2)
